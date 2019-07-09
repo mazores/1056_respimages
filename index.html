@@ -3,19 +3,24 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale="1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	
+
 	<title>Week 9: Responsive Images</title>
 </head>
 <body>
 	<main>
 		<div>
-			<img src="" alt="">
-			<!-- <picture>
-
-			</picture> -->
-
+			<!-- Better to use picture tag for resp images -->
+			<picture>
+				<!-- landscape of phone -->
+				<source srcset="images/hubble-mid_web.jpg" media="(min-width: 660px)">
+				<!-- bigger than landscape of phone -->
+				<source srcset="images/hubble-large_web.jpg" media="(min-width: 1000px)">
+				<!-- always include a default image for browsers that don't support picture tag, and also if a media query doesn't match. If picture tag doesn't work out then show this img instead. -->
+				<img src="images/hubble-small_web.jpg" alt="hubble image">
+			</picture>
 		</div>
 	</main>
 </body>

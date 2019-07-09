@@ -1,0 +1,4 @@
+/* img { width: 100%; } /* dont ever do this bec it makes ur apps look like crap */
+
+/* make sure the image can't scale past its natural dimensions */
+img, embed, object, video { max-width: 100%; }
